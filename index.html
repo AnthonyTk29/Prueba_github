@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Nocturno y Claro</title>
+  <link rel="stylesheet" href="./assets/css/styles.css"> <!-- Ruta al archivo CSS -->
+</head>
+<body class="light-mode"> <!-- Inicialmente en modo claro -->
+
+  <!-- Menú -->
+  <div class="menu">
+    <a href="#">Inicio</a>
+    <a href="#">Acerca</a>
+    <a href="#">Contacto</a>
+    <div class="switch-container">
+      <!-- Switch de modo nocturno -->
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="content">
+    <div class="chat">
+        <h3 class="titulochat"><img src="./assets/img/chat.png" alt=""> AJLB SISTEM</h3>
+      <div class="messages" id="messageContainer">
+        <!-- Aquí se mostrarían los mensajes del chat -->
+        <p><strong>Usuario:</strong> Hola, ¿cómo estás?</p>
+        <p><strong>Soporte:</strong> ¡Hola! Estoy bien, ¿y tú?</p>
+      </div>
+      <input type="text" id="messageInput" placeholder="Escribe un mensaje...">
+      <button class="send-button" onclick="sendMessage()">Enviar <img src="./assets/img/enviar-mensaje.png" width="12px" alt=""></button>
+    </div>
+  </div>
+
+  <script src="./assets/js/scripts.js"></script> <!-- Ruta al archivo JS -->
+</body>
+</html>
