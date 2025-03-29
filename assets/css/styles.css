@@ -1,0 +1,144 @@
+/* Estilos comunes */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100%;
+  transition: background 0.3s ease;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Contenedor del contenido */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Contenedor del chat */
+
+.chat {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chat input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.chat .titulochat {
+  text-align: center;
+}
+
+.chat .messages {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+/* Modo claro */
+.light-mode {
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  color: black;
+}
+
+/* Modo nocturno */
+.dark-mode {
+  background: linear-gradient(to left, #89253e, #3a6186);
+  color: rgb(0, 0, 0);
+}
+
+/* Switch de cambio de tema */
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Tamaño pequeño */
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* Cambiar color cuando esté activado */
+input:checked + .slider {
+  background-color: #3498db; /* Color azul cuando esté activado */
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px); /* Desplazar el círculo al lado derecho */
+}
+
+/* Botón de enviar */
+.send-button {
+  padding: 10px 20px;
+  background-color: #1c252c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
